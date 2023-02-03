@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Blog;
-use App\Models\Mentor;
 use App\Models\ModelDestinations;
+use App\Models\ModelReviews;
 use Illuminate\Http\Request;
 
 class LandingController extends Controller
@@ -16,9 +15,9 @@ class LandingController extends Controller
      */
     public function index()
     {
-        $mentors = Mentor::all();
+        $reviews = ModelReviews::all();
         $destination = ModelDestinations::all();
-        return view('public.index', compact(['destination','mentors']));
+        return view('public.index', compact(['destination','reviews']));
     }
 
         /**

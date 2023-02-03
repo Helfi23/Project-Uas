@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="./gambar/Naik.Kapal.svg">
   <title>Naik.Kapal</title>
   <!-- Fonts -->
   <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -116,7 +117,7 @@
     </div>
   </div>
 
-@include('layouts.course')
+@include('layouts.destination')
 
   <div class="about-section md:flex block lg:space-x-5 space-x-0 mt-20 lg:mx-20 mx-8 mb-72">
     <div>
@@ -297,8 +298,7 @@
       <div data-aos="fade-up" data-aos-duration="1400" class="grid md:grid-cols-3 grid-cols-1  gap-10 lg:mx-40 md:mx-10 mx-20 pt-20">
         
         <div class=" bg-white shadow-lg px-5 py-5 text-center">
-          {{-- <img src="./assets/people2.svg" alt="" class="mx-auto"> --}}
-          @include('layouts.mentor')
+          @include('layouts.review')
           <div class="flex items-center space-x-4 justify-center">
             <img src="./assets/Star.svg" alt="">
             <img src="./assets/Star.svg" alt="">
@@ -308,7 +308,7 @@
           </div>
         </div>
         <div class=" bg-white shadow-lg px-5 py-5 text-center">
-          @include('layouts.mentor')
+          @include('layouts.review')
           <div class="flex items-center space-x-4 justify-center">
             <img src="./assets/Star.svg" alt="">
             <img src="./assets/Star.svg" alt="">
@@ -318,7 +318,7 @@
           </div>
         </div>
         <div class=" bg-white shadow-lg px-5 py-5 text-center">
-          @include('layouts.mentor')
+          @include('layouts.review')
           <div class="flex items-center space-x-4 justify-center">
             <img src="./assets/Star.svg" alt="">
             <img src="./assets/Star.svg" alt="">

@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="text-xl font-semibold leading-tight text-gray-800">
-            {{ __('Mentor Create') }}
+            {{ __('Review Create') }}
         </h2>
     </x-slot>
 
@@ -10,7 +10,7 @@
         <div class="col-md-12">
             <div class="card">
                 <div class="card-body">
-                    <form action="{{ route('mentors.store') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('reviews.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
     
                         <div class="form-group">

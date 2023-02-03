@@ -1,11 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\BlogController;
 use App\Http\Controllers\DestinationsController;
 use App\Http\Controllers\MentorController;
 use App\Http\Controllers\LandingController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ReviewController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,7 +19,7 @@ use App\Http\Controllers\ProfileController;
 */
 
 Route::get('/', [LandingController::class, 'index']);
-// Route::get('/', [LandingController::class, 'show']);
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -31,8 +31,7 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-// useless routes
-// Just to demo sidebar dropdown links active states.
+
 Route::get('/buttons/text', function () {
     return view('buttons-showcase.text');
 })->middleware(['auth'])->name('buttons.text');
@@ -46,23 +45,7 @@ Route::get('/buttons/text-icon', function () {
 })->middleware(['auth'])->name('buttons.text-icon');
 
 Route::resource('destinations', DestinationsController::class);
-Route::resource('mentors', MentorController::class);
-
-// Route::middleware('auth')->group(function () {
-//     Route::get('/mentors', [MentorController::class, 'index'])->name('mentors.index');
-//     Route::get('/mentors/create', [MentorController::class, 'create'])->name('mentors.create');
-//     Route::post('mentors/{id}', function ($id) {
-//         Route::get('users/{id}', function ($id) {
-            
-//         });
-//     });
-// });
-
-// Route::post('mentors', 'MentorController@store');
-// Route::get('mentors/{id}', 'MentorController@show');
-// Route::get('mentors/{id}/edit', 'MentorController@edit');
-// Route::put('mentors/{id}', 'MentorController@update');
-// Route::delete('mentors/{id}', 'MentorController@destroy');
+Route::resource('reviews', ReviewController::class);
 
 
 require __DIR__ . '/auth.php';

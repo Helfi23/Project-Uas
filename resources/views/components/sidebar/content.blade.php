@@ -29,14 +29,9 @@
         />
         <x-sidebar.sublink
             title="Review"
-            href="{{ route('mentors.index') }}"
-            :active="request()->routeIs('mentors.index')"
+            href="{{ route('reviews.index') }}"
+            :active="request()->routeIs('reviews.index')"
         />
-        {{-- <x-sidebar.sublink
-            title="Text with icon"
-            href="{{ route('buttons.text-icon') }}"
-            :active="request()->routeIs('buttons.text-icon')"
-        /> --}}
         </x-sidebar.dropdown>
 
 </x-perfect-scrollbar>

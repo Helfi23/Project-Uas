@@ -2,11 +2,12 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
-class Mentor extends Model
+class ModelReviews extends Model
 {
+    use HasFactory;
     protected $fillable = [
         'name', 'profession', 'description', 'photo'
     ];
