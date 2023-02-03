@@ -27,7 +27,7 @@
                         </div>
                         <div class="mb-6">
                             <label class="block">
-                                <span class="text-gray-700 @error('type') text-red-500 @enderror">type</span>
+                                <span class="text-gray-700 @error('type') text-red-500 @enderror">Type</span>
                                 <textarea
                                     class="block @error('type') border-red-500  bg-red-100 text-red-900 @enderror w-full mt-1 rounded-md"
                                     name="type" rows="3">{{old('type')}}</textarea>
@@ -40,7 +40,7 @@
                         </div>
                         <div class="mb-6">
                             <label class="block">
-                                <span class="text-gray-700 @error('description') text-red-500 @enderror">description</span>
+                                <span class="text-gray-700 @error('description') text-red-500 @enderror">Description</span>
                                 <textarea
                                     class="block @error('description') border-red-500  bg-red-100 text-red-900 @enderror w-full mt-1 rounded-md"
                                     name="description" rows="3">{{old('description')}}</textarea>
@@ -53,7 +53,7 @@
                         </div>
                         <div class="mb-6">
                             <label class="block">
-                                <span class="text-gray-700 @error('location') text-red-500 @enderror">location</span>
+                                <span class="text-gray-700 @error('location') text-red-500 @enderror">Location</span>
                                 <textarea
                                     class="block @error('location') border-red-500  bg-red-100 text-red-900 @enderror w-full mt-1 rounded-md"
                                     name="location" rows="3">{{old('location')}}</textarea>

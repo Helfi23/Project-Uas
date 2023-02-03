@@ -11,7 +11,6 @@ class DestinationsController extends Controller
     public function index()
     {
         $destination = ModelDestinations::all();
-
         return view('destinations.index', compact('destination'));
     }
 

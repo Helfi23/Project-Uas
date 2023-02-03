@@ -296,9 +296,12 @@
       <h4 data-aos="fade-up" data-aos-duration="1000" class="uppercase text-highlight text-[1.1rem]">JUST FOR THOSE WHO USE US</h4>
       <h1 data-aos="fade-up" data-aos-duration="1200" class="lg:text-[2.6rem] text-[2.5rem] font-bold lg:w-[100%] md:w-[85%]">Comments on this App</h1>
       <div data-aos="fade-up" data-aos-duration="1400" class="grid md:grid-cols-3 grid-cols-1  gap-10 lg:mx-40 md:mx-10 mx-20 pt-20">
-        
+        @foreach ($reviews as $review)
         <div class=" bg-white shadow-lg px-5 py-5 text-center">
-          @include('layouts.review')
+          <img class="w-32 h-32 rounded-full mx-auto mb-4" src="{{ asset('images/'.$review->photo) }}" alt="{{ $review->name }}">
+            <h1 class="mt-5 text-2xl font-bold">{{ $review->name }}</h1>
+             <div>{!! $review->profession !!}</div>
+              <div>{!! $review->description !!}</div>
           <div class="flex items-center space-x-4 justify-center">
             <img src="./assets/Star.svg" alt="">
             <img src="./assets/Star.svg" alt="">
@@ -307,26 +310,7 @@
             <img src="./assets/Star.svg" alt="">
           </div>
         </div>
-        <div class=" bg-white shadow-lg px-5 py-5 text-center">
-          @include('layouts.review')
-          <div class="flex items-center space-x-4 justify-center">
-            <img src="./assets/Star.svg" alt="">
-            <img src="./assets/Star.svg" alt="">
-            <img src="./assets/Star.svg" alt="">
-            <img src="./assets/Star.svg" alt="">
-            <img src="./assets/Star.svg" alt="">
-          </div>
-        </div>
-        <div class=" bg-white shadow-lg px-5 py-5 text-center">
-          @include('layouts.review')
-          <div class="flex items-center space-x-4 justify-center">
-            <img src="./assets/Star.svg" alt="">
-            <img src="./assets/Star.svg" alt="">
-            <img src="./assets/Star.svg" alt="">
-            <img src="./assets/Star.svg" alt="" >
-            <img src="./assets/Star1.png" alt="" class="w-[2rem]">
-          </div>
-        </div>
+        @endforeach
       </div>
     </div>
   </div>
